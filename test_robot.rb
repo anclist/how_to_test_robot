@@ -83,7 +83,7 @@ class TestRobot < MiniTest::Test
   def test_workday_on_day_off_returns_false
     # skip
     # arrange
-    day_off = "Sunday"
+    @robot.day_off = "Sunday"
     # act
     result = @robot.workday?("Sunday")
     expect = false
@@ -94,7 +94,7 @@ class TestRobot < MiniTest::Test
   def test_workday_not_day_off_returns_true
     # skip
     # arrange
-    day_off = "Sunday"
+    @robot.day_off = "Sunday"
     # act
     result = @robot.workday?("Monday")
     expect = true
